@@ -8,7 +8,7 @@
     <Button
         android:id="@+id/button_china"
         android:layout_width="fill_parent"
-        android:layout_height="170dp"
+        android:layout_height="175dp"
         android:background="@drawable/select_chinese"
         android:textColor="#000000"
         android:textSize="40dp"
@@ -20,7 +20,7 @@
     <Button
         android:id="@+id/button_western"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="175dp"
         android:background="@drawable/select_western"
         android:textColor="#000000"
         android:textSize="40dp"

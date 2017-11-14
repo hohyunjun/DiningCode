@@ -8,8 +8,7 @@
         android:id="@+id/button_chicken"
         android:layout_width="fill_parent"
         android:layout_height="255dp"
-        android:background="#00ff0000"
-        android:text="닭"
+        android:background="@drawable/cube_chicken"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -19,15 +18,15 @@
 
     <Button
         android:id="@+id/button_not_chicken"
-        android:layout_width="394dp"
-        android:layout_height="255dp"
-        android:background="#00ff0000"
-        android:text="닭 말고"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cube_non_chicken"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_chicken" />
 
 </android.support.constraint.ConstraintLayout>

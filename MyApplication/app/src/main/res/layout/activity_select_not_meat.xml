@@ -9,8 +9,7 @@
         android:id="@+id/button_china"
         android:layout_width="fill_parent"
         android:layout_height="170dp"
-        android:background="#00ff0000"
-        android:text="중식"
+        android:background="@drawable/select_chinese"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -18,58 +17,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="fill_parent"
-        android:layout_height="170dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/china" />
-
     <Button
         android:id="@+id/button_western"
-        android:layout_width="394dp"
-        android:layout_height="170dp"
-        android:background="#00ff0000"
-        android:text="양식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/select_western"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="fill_parent"
-        android:layout_height="170dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/western" />
+        app:layout_constraintTop_toBottomOf="@+id/button_snack" />
 
     <Button
         android:id="@+id/button_snack"
-        android:layout_width="394dp"
-        android:layout_height="170dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="168dp"
-        android:background="#00ff0000"
-        android:text="분식"
+        android:background="@drawable/select_snack"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="fill_parent"
-        android:layout_height="170dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_china"
-        app:srcCompat="@mipmap/snack" />
+        app:layout_constraintTop_toBottomOf="@+id/button_china" />
 
 </android.support.constraint.ConstraintLayout>

@@ -10,8 +10,7 @@
         android:id="@+id/button_kor"
         android:layout_width="fill_parent"
         android:layout_height="255dp"
-        android:background="#00ff0000"
-        android:text="한식"
+        android:background="@drawable/cube_korean"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -21,15 +20,15 @@
 
     <Button
         android:id="@+id/button_not_kor"
-        android:layout_width="394dp"
-        android:layout_height="255dp"
-        android:background="#00ff0000"
-        android:text="한식 말고 일식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cube_non_korean"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_kor" />
 
 </android.support.constraint.ConstraintLayout>

@@ -10,8 +10,7 @@
         android:id="@+id/button_rice"
         android:layout_width="fill_parent"
         android:layout_height="255dp"
-        android:background="#00ff0000"
-        android:text="밥"
+        android:background="@drawable/cube_rice"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -22,15 +21,15 @@
 
     <Button
         android:id="@+id/button_not_rice"
-        android:layout_width="394dp"
-        android:layout_height="255dp"
-        android:background="#00ff0000"
-        android:text="밥 말고"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cube_non_rice"
         android:textColor="#000000"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_rice" />
 
 </android.support.constraint.ConstraintLayout>

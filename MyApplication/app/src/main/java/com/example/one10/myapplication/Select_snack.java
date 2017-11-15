@@ -16,6 +16,7 @@ public class Select_snack extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_snack);
+
         ListView listview=(ListView)findViewById(R.id.listview6); // 리스트뷰 객체화
         ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
         data.add("김밥고을");

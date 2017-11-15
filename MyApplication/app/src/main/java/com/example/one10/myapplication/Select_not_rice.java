@@ -10,7 +10,7 @@ import android.widget.Button;
  * Created by one10 on 2017-11-01.
  */
 
-public class Select_not_rice extends AppCompatActivity {
+public class    Select_not_rice extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

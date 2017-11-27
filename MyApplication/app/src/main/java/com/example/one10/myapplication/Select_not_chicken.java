@@ -16,7 +16,6 @@ public class Select_not_chicken extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_not_chicken);
 
-
         ListView listview=(ListView)findViewById(R.id.listview1); // 리스트뷰 객체화
         ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
         data.add("왕대포");

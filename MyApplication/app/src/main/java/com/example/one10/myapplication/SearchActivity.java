@@ -400,36 +400,36 @@ public class SearchActivity extends AppCompatActivity
                     "connection lost.  Cause: service disconnected");
     }
 
-
-    public String getCurrentAddress(Location location) {
+// ================================
+    public String getCurrentAddress(Location location) { // 현재 위도와 경도를 받아서 주소로 바꾸어주는 함수
 
         //지오코더... GPS를 주소로 변환
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        // 지오코딩은 주소를 지리좌표(위도 및 경도)로 변환하는 프로세스. 그 역도 가능함. 이 프로세스를 사용하여 마커를 지도에 넣거나 지도를 배치할 수 있음.
 
-        List<Address> addresses;
+        List<Address> addresses; // 주소값을 저장할 리스트
 
         try {
 
-            addresses = geocoder.getFromLocation(
+            addresses = geocoder.getFromLocation( // 지오코더를 통해 GPS를 주소로 변환한 값을 address에 저장
                     location.getLatitude(),
                     location.getLongitude(),
                     1);
-        } catch (IOException ioException) {
-            //네트워크 문제
+        } catch (IOException ioException) { // 네트워크 문제 예외처리
             Toast.makeText(this, "지오코더 서비스 사용불가", Toast.LENGTH_LONG).show();
             return "지오코더 서비스 사용불가";
-        } catch (IllegalArgumentException illegalArgumentException) {
+        } catch (IllegalArgumentException illegalArgumentException) { // 잘못된 GPS 좌표 예외처리
             Toast.makeText(this, "잘못된 GPS 좌표", Toast.LENGTH_LONG).show();
             return "잘못된 GPS 좌표";
 
         }
 
 
-        if (addresses == null || addresses.size() == 0) {
+        if (addresses == null || addresses.size() == 0) { // 주소가 발견되지 않는 경우
             Toast.makeText(this, "주소 미발견", Toast.LENGTH_LONG).show();
             return "주소 미발견";
 
-        } else {
+        } else { // 주소가 발견될 경우
             Address address = addresses.get(0);
             return address.getAddressLine(0).toString();
         }
@@ -437,7 +437,7 @@ public class SearchActivity extends AppCompatActivity
     }
 
 
-    public boolean checkLocationServicesStatus() {
+    public boolean checkLocationServicesStatus() { // GPS의 상태를 확인해서 반환하는 함수
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
@@ -445,20 +445,21 @@ public class SearchActivity extends AppCompatActivity
     }
 
 
-    public void setCurrentLocation(Location location, String markerTitle, String markerSnippet) {
+    public void setCurrentLocation(Location location, String markerTitle, String markerSnippet) { // 현재 위치를 지정하는 함수
 
         mMoveMapByUser = false;
 
 
-        if (currentMarker != null) currentMarker.remove();
+        if (currentMarker != null) currentMarker.remove(); // 현재 마커가 null 이 아닐 경우 마커를 없앤다
 
 
         LatLng currentLatLng = new LatLng(location.getLatitude(), location.getLongitude());
-
+        // 현재 Latitude 와 Longitude 를 저장하는 변수
         //구글맵의 디폴트 현재 위치는 파란색 동그라미로 표시
         //마커를 원하는 이미지로 변경하여 현재 위치 표시하도록 수정해야함.
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(currentLatLng);
+        MarkerOptions markerOptions = new MarkerOptions(); // 마커객체 생성
+        markerOptions.position(currentLatLng); // 마커객체의 위치를 현재위치로
+        // 마커의 세부정보 설정
         markerOptions.title(markerTitle);
         markerOptions.snippet(markerSnippet);
         markerOptions.draggable(true);
@@ -467,7 +468,7 @@ public class SearchActivity extends AppCompatActivity
         currentMarker = mGoogleMap.addMarker(markerOptions);
 
 
-        if ( mMoveMapByAPI ) {
+        if ( mMoveMapByAPI ) { // API에서 맵을 이동시킨다
 
             Log.d( TAG, "setCurrentLocation :  mGoogleMap moveCamera "
                     + location.getLatitude() + " " + location.getLongitude() ) ;
@@ -478,21 +479,21 @@ public class SearchActivity extends AppCompatActivity
     }
 
 
-    public void setDefaultLocation() {
+    public void setDefaultLocation() { // 초기 위치를 지정하는 함수
 
         mMoveMapByUser = false;
 
-
-        //디폴트 위치, Seoul
+        //디폴트 위치, 국민대로 지정
         LatLng DEFAULT_LOCATION = new LatLng(37.6096, 126.9977);
         String markerTitle = "위치정보 가져올 수 없음";
-        String markerSnippet = "위치 퍼미션과 GPS 활성 요부 확인하세요";
+        String markerSnippet = "위치 퍼미션과 GPS 활성 여부 확인하세요";
 
 
-        if (currentMarker != null) currentMarker.remove();
+        if (currentMarker != null) currentMarker.remove(); // CurrentMarker가 존재할 경우 삭제
 
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(DEFAULT_LOCATION);
+        MarkerOptions markerOptions = new MarkerOptions(); // 새로운 마커 생성
+        markerOptions.position(DEFAULT_LOCATION); // 마커 위치를 위에서 지정한 default location으로 변경
+        // 마커의 세부정보 설정
         markerOptions.title(markerTitle);
         markerOptions.snippet(markerSnippet);
         markerOptions.draggable(true);
@@ -500,7 +501,7 @@ public class SearchActivity extends AppCompatActivity
         currentMarker = mGoogleMap.addMarker(markerOptions);
 
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
-        mGoogleMap.moveCamera(cameraUpdate);
+        mGoogleMap.moveCamera(cameraUpdate); // 카메라 이동
 
     }
 
@@ -624,7 +625,7 @@ public class SearchActivity extends AppCompatActivity
         builder.setCancelable(true);
         builder.setPositiveButton("설정", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int id) {
+            public void onClick(DialogInterface dialog, int id) { //위치 서비스 설정 버튼을 누르면 GPS 활성화
                 Intent callGPSSettingIntent
                         = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivityForResult(callGPSSettingIntent, GPS_ENABLE_REQUEST_CODE);

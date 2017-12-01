@@ -18,7 +18,8 @@ import java.util.ArrayList;
 public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickListener {
 
     public interface ListBtnClickListener {
-        void onListBtnClick(int position) ;
+        void onListBtnClick1(int position) ;
+        void onListBtnClick2(int position) ;
     }
 
     // 생성자로부터 전달된 resource id 값을 저장.
@@ -39,7 +40,7 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
 
     // 새롭게 만든 Layout을 위한 View를 생성하는 코드
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         final int pos = position ;
         final Context context = parent.getContext();
 
@@ -62,11 +63,19 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
 
         // button1 클릭 시 TextView(textView1)의 내용 변경.
         Button button1 = (Button) convertView.findViewById(R.id.button1);
+        button1.setTag(position);
         button1.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                //textTextView.setText(Integer.toString(pos + 1) + "번 아이템 선택.");
+                if (listBtnClickListener != null) {
+                    listBtnClickListener.onListBtnClick1((int)v.getTag()) ;
+                }
             }
         });
+
+        // button2의 TAG에 position값 지정. Adapter를 click listener로 지정.
+        Button button2 = (Button) convertView.findViewById(R.id.button2);
+        button2.setTag(position);
+        button2.setOnClickListener(this);
 
         return convertView;
     }
@@ -76,7 +85,7 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
     public void onClick(View v) {
         // ListBtnClickListener(MainActivity)의 onListBtnClick() 함수 호출.
         if (this.listBtnClickListener != null) {
-            this.listBtnClickListener.onListBtnClick((int)v.getTag()) ;
+            this.listBtnClickListener.onListBtnClick2((int)v.getTag()) ;
         }
     }
 

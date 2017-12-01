@@ -17,7 +17,12 @@ import java.util.ArrayList;
 public class Select_chicken extends AppCompatActivity implements ListViewBtnAdapter.ListBtnClickListener {
 
     @Override
-    public void onListBtnClick(int position) {
+    public void onListBtnClick1(int position) {
+        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+    }
+
+    @Override
+    public void onListBtnClick2(int position) {
         Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
     }
 

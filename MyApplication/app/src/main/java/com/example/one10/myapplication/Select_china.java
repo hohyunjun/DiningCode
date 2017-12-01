@@ -1,12 +1,12 @@
 package com.example.one10.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,8 +17,29 @@ import java.util.ArrayList;
 public class Select_china extends AppCompatActivity  implements ListViewBtnAdapter.ListBtnClickListener {
 
     @Override
-    public void onListBtnClick(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+    public void onListBtnClick1(int position) {
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+            startActivity(intent);
+        }
+
+    }
+
+    @Override
+    public void onListBtnClick2(int position) {
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+            startActivity(intent);
+        }
+
     }
 
 

@@ -16,9 +16,12 @@ import java.util.ArrayList;
 
 public class Select_not_soup extends AppCompatActivity implements ListViewBtnAdapter.ListBtnClickListener{
 
-
     @Override
-    public void onListBtnClick(int position) {
+    public void onListBtnClick1(int position) {
+        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+    }
+    @Override
+    public void onListBtnClick2(int position) {
         Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
     }
 
@@ -79,7 +82,7 @@ public class Select_not_soup extends AppCompatActivity implements ListViewBtnAda
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView parent, View v,int position, long id){
-
+                //Todo : item click
             }
         });
 

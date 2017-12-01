@@ -1,5 +1,6 @@
 package com.example.one10.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +19,38 @@ public class Select_snack extends AppCompatActivity implements ListViewBtnAdapte
 
     @Override
     public void onListBtnClick1(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchKimGoeul.class);
+            startActivity(intent);
+        }
+        else if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchYeopKi.class);
+            startActivity(intent);
+        }
+        else if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),SearchBingSoo.class);
+            startActivity(intent);
+        }
+        else if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),SearchBoolNan.class);
+            startActivity(intent);
+        }
+        else if(position == 4) {
+            Intent intent=new Intent(getApplicationContext(),SearchLegendNaemBi.class);
+            startActivity(intent);
+        }
+        else if(position == 5) {
+            Intent intent=new Intent(getApplicationContext(),SearchSinJeon.class);
+            startActivity(intent);
+        }
+        else if(position == 6) {
+            Intent intent=new Intent(getApplicationContext(),SearchKookminSang.class);
+            startActivity(intent);
+        }
+        else if(position == 7) {
+            Intent intent=new Intent(getApplicationContext(),SearchMatLove.class);
+            startActivity(intent);
+        }
     }
 
     @Override

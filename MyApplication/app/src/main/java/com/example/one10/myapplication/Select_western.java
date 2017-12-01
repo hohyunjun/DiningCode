@@ -45,7 +45,7 @@ public class Select_western extends AppCompatActivity implements ListViewBtnAdap
         item.setText("델리버스") ;
         list.add(item) ;
         i++ ;
-        
+
         return true ;
     }
 

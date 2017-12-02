@@ -58,33 +58,26 @@ public class Select_not_soup extends AppCompatActivity implements ListViewBtnAda
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {
         ListViewBtnItem item ;
-        int i ;
 
         if (list == null) {
             list = new ArrayList<ListViewBtnItem>() ;
         }
-
-        // 순서를 위한 i 값을 1로 초기화.
-        i = 1 ;
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.songbaek)) ;
         item.setText("송백식당") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.ssamstory)) ;
         item.setText("쌈스토리") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.grimby)) ;
         item.setText("그림비") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.secondstory)) ;
@@ -97,9 +90,9 @@ public class Select_not_soup extends AppCompatActivity implements ListViewBtnAda
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_not_soup);
+        setContentView(R.layout.activity_listview);
 
-        ListView listview=(ListView)findViewById(R.id.listview5); // 리스트뷰 객체화
+        ListView listview=(ListView)findViewById(R.id.listview3); // 리스트뷰 객체화
         ListViewBtnAdapter adapter;
         ArrayList<ListViewBtnItem> items = new ArrayList<ListViewBtnItem>() ;
 
@@ -116,20 +109,6 @@ public class Select_not_soup extends AppCompatActivity implements ListViewBtnAda
             }
         });
 
-
-        /*
-        ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
-        data.add("송백식당");
-        data.add("쌈스토리");
-        data.add("그림비");
-        data.add("두번째이야기");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
-
-        listview.setAdapter(adapter);
-        */
     }
-
-
-
 
 }

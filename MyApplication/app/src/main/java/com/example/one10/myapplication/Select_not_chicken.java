@@ -160,21 +160,4 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
             }
         });
     }
-
-
-        /*
-        ListView listview=(ListView)findViewById(R.id.listview1); // 리스트뷰 객체화
-        ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
-        data.add("왕대포");
-        data.add("주경야돈");
-        data.add("배밭골");
-        data.add("소한마리");
-        data.add("송정갈비");
-        data.add("북악골");
-        data.add("철이네");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
-
-        listview.setAdapter(adapter);
-        */
-
 }

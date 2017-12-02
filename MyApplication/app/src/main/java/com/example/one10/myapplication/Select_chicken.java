@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -51,33 +50,26 @@ public class Select_chicken extends AppCompatActivity implements ListViewBtnAdap
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {
         ListViewBtnItem item ;
-        int i ;
 
         if (list == null) {
             list = new ArrayList<ListViewBtnItem>() ;
         }
-
-        // 순서를 위한 i 값을 1로 초기화.
-        i = 1 ;
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.nomchicken)) ;
         item.setText("놈치킨") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.mattjjang)) ;
         item.setText("맛짱") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.ggol)) ;
         item.setText("꿀양파닭") ;
         list.add(item) ;
-        i++ ;
 
         return true ;
     }
@@ -85,7 +77,7 @@ public class Select_chicken extends AppCompatActivity implements ListViewBtnAdap
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_chicken);
+        setContentView(R.layout.activity_listview);
 
         ListView listview = (ListView) findViewById(R.id.listview3); // 리스트뷰 객체화
         ListViewBtnAdapter adapter;
@@ -105,14 +97,4 @@ public class Select_chicken extends AppCompatActivity implements ListViewBtnAdap
         });
     }
 
-/*
-        ListView listview=(ListView)findViewById(R.id.listview3); // 리스트뷰 객체화
-        ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
-        data.add("놈치킨");
-        data.add("맛짱");
-        data.add("꿀양파닭");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
-
-        listview.setAdapter(adapter);
-  */
 }

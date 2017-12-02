@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -60,39 +59,31 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {
         ListViewBtnItem item ;
-        int i ;
 
         if (list == null) {
             list = new ArrayList<ListViewBtnItem>() ;
         }
-
-        // 순서를 위한 i 값을 1로 초기화.
-        i = 1 ;
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.seolak)) ;
         item.setText("설악추어탕") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.halmae)) ;
         item.setText("할매순대국") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.eunhye)) ;
         item.setText("은혜감자탕") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.hyunjoo)) ;
         item.setText("현주네포차") ;
         list.add(item) ;
-        i++ ;
 
         return true ;
     }
@@ -100,9 +91,9 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_soup);
+        setContentView(R.layout.activity_listview);
 
-        ListView listview = (ListView) findViewById(R.id.listview7); // 리스트뷰 객체화
+        ListView listview = (ListView) findViewById(R.id.listview3); // 리스트뷰 객체화
         ListViewBtnAdapter adapter;
         ArrayList<ListViewBtnItem> items = new ArrayList<ListViewBtnItem>();
 
@@ -119,15 +110,5 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
             }
         });
     }
-/*
-        ListView listview=(ListView)findViewById(R.id.listview7); // 리스트뷰 객체화
-        ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
-        data.add("설악추어탕");
-        data.add("할매순대국");
-        data.add("은혜감자탕");
-        data.add("현주네포차");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
 
-        listview.setAdapter(adapter);
-    */
 }

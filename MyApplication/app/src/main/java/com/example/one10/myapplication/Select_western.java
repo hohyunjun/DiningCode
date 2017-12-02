@@ -43,27 +43,21 @@ public class Select_western extends AppCompatActivity implements ListViewBtnAdap
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {
         ListViewBtnItem item ;
-        int i ;
 
         if (list == null) {
             list = new ArrayList<ListViewBtnItem>() ;
         }
-
-        // 순서를 위한 i 값을 1로 초기화.
-        i = 1 ;
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.momtouch)) ;
         item.setText("맘스터치") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.delibus)) ;
         item.setText("델리버스") ;
         list.add(item) ;
-        i++ ;
 
         return true ;
     }
@@ -71,9 +65,9 @@ public class Select_western extends AppCompatActivity implements ListViewBtnAdap
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_western);
+        setContentView(R.layout.activity_listview);
 
-        ListView listview = (ListView) findViewById(R.id.listview8); // 리스트뷰 객체화
+        ListView listview = (ListView) findViewById(R.id.listview3); // 리스트뷰 객체화
         ListViewBtnAdapter adapter;
         ArrayList<ListViewBtnItem> items = new ArrayList<ListViewBtnItem>();
 
@@ -90,16 +84,5 @@ public class Select_western extends AppCompatActivity implements ListViewBtnAdap
             }
         });
     }
-
-/*
-        ListView listview=(ListView)findViewById(R.id.listview8); // 리스트뷰 객체화
-        ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
-        data.add("맘스터치");
-        data.add("델리버스");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
-
-        listview.setAdapter(adapter);
-
-*/
 
 }

@@ -93,63 +93,51 @@ public class Select_china extends AppCompatActivity  implements ListViewBtnAdapt
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {
         ListViewBtnItem item ;
-        int i ;
 
         if (list == null) {
             list = new ArrayList<ListViewBtnItem>() ;
         }
-
-        // 순서를 위한 i 값을 1로 초기화.
-        i = 1 ;
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.samsung)) ;
         item.setText("삼성원") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.bosung)) ;
         item.setText("보성각") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.imgm)) ;
         item.setText("임금님") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.quaile)) ;
         item.setText("콰이러") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.bukaklu)) ;
         item.setText("북악루") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.juimara)) ;
         item.setText("주이마라") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.huagua)) ;
         item.setText("훠궈집") ;
         list.add(item) ;
-        i++ ;
 
         item = new ListViewBtnItem() ;
         item.setIcon(ContextCompat.getDrawable(this, R.drawable.chungrok)) ;
         item.setText("청록원") ;
         list.add(item) ;
-        i++ ;
 
         return true ;
     }
@@ -157,9 +145,9 @@ public class Select_china extends AppCompatActivity  implements ListViewBtnAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_china);
+        setContentView(R.layout.activity_listview);
 
-        ListView listview = (ListView) findViewById(R.id.listview2); // 리스트뷰 객체화
+        ListView listview = (ListView) findViewById(R.id.listview3); // 리스트뷰 객체화
         ListViewBtnAdapter adapter;
         ArrayList<ListViewBtnItem> items = new ArrayList<ListViewBtnItem>();
 
@@ -176,19 +164,4 @@ public class Select_china extends AppCompatActivity  implements ListViewBtnAdapt
             }
         });
     }
-/*
-        ListView listview=(ListView)findViewById(R.id.listview2); // 리스트뷰 객체화
-        ArrayList<String> data = new ArrayList<String>(); // 리스트뷰에 담을 배열
-        data.add("삼성원");
-        data.add("보성각");
-        data.add("임금님");
-        data.add("콰이러");
-        data.add("북악루");
-        data.add("주이마라");
-        data.add("훠거집");
-        data.add("청록원");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
-
-        listview.setAdapter(adapter);
-*/
 }

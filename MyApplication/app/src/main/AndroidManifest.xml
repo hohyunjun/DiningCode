@@ -24,6 +24,7 @@
 
         <activity android:name=".Select_main"></activity>
         <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".SearchSamSung"></activity>
         <activity android:name=".Select_rice"></activity>
         <activity android:name=".Select_kor"></activity>
         <activity android:name=".Select_not_rice"></activity>

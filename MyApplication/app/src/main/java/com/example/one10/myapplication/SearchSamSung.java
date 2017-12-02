@@ -12,17 +12,15 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -47,9 +45,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-import noman.googleplaces.NRPlaces;
 import noman.googleplaces.Place;
-import noman.googleplaces.PlaceType;
 import noman.googleplaces.PlacesException;
 import noman.googleplaces.PlacesListener;
 
@@ -90,10 +86,11 @@ public class SearchSamSung extends AppCompatActivity
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.restaurants);
 
         previous_marker = new ArrayList<Marker>();
 
+        /*
         Button button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +98,7 @@ public class SearchSamSung extends AppCompatActivity
                 showPlaceInformation(currentPosition);
             }
         });
+        */
 
         Log.d(TAG, "onCreate");
         mActivity = this;
@@ -184,6 +182,7 @@ public class SearchSamSung extends AppCompatActivity
         }
     }
 
+    /*
     public void showPlaceInformation(LatLng location)
     {
         mGoogleMap.clear();//지도 클리어
@@ -201,6 +200,7 @@ public class SearchSamSung extends AppCompatActivity
                 .build()
                 .execute();
     }
+    */
 
     private void startLocationUpdates() {
 
@@ -217,7 +217,6 @@ public class SearchSamSung extends AppCompatActivity
                 return;
             }
 
-
             Log.d(TAG, "startLocationUpdates : call FusedLocationApi.requestLocationUpdates");
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, locationRequest, this);
             mRequestingLocationUpdates = true;
@@ -225,10 +224,7 @@ public class SearchSamSung extends AppCompatActivity
             mGoogleMap.setMyLocationEnabled(true);
 
         }
-
     }
-
-
 
     private void stopLocationUpdates() {
 
@@ -485,7 +481,7 @@ public class SearchSamSung extends AppCompatActivity
 
         //디폴트 위치, 국민대로 지정
         LatLng DEFAULT_LOCATION = new LatLng(37.6080, 127.0000);
-        String markerTitle = "위치정보 가져올 수 없음";
+        String markerTitle = "삼성원";
         String markerSnippet = "위치 퍼미션과 GPS 활성 여부 확인하세요";
 
 

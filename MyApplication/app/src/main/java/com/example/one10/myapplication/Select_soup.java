@@ -1,5 +1,6 @@
 package com.example.one10.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +19,22 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
 
     @Override
     public void onListBtnClick1(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchSeolAk.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchHalMae.class);
+            startActivity(intent);
+        }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),SearchEunHye.class);
+            startActivity(intent);
+        }
+        if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),SearchHyunJoo.class);
+            startActivity(intent);
+        }
     }
 
     @Override

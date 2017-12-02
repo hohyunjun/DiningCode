@@ -38,6 +38,20 @@
         <activity android:name=".Select_not_chicken"></activity>
         <activity android:name=".Select_soup"></activity>
         <activity android:name=".Select_not_soup"></activity>
+        <activity android:name=".SearchMomTouch"></activity>
+        <activity android:name=".SearchDeliBus"></activity>
+        <activity android:name=".SearchKimGoeul"></activity>
+        <activity android:name=".SearchBingSoo"></activity>
+        <activity android:name=".SearchBoolNan"></activity>
+        <activity android:name=".SearchEunHye"></activity>
+        <activity android:name=".SearchHalMae"></activity>
+        <activity android:name=".SearchHyunJoo"></activity>
+        <activity android:name=".SearchKookminSang"></activity>
+        <activity android:name=".SearchLegendNaemBi"></activity>
+        <activity android:name=".SearchMatLove"></activity>
+        <activity android:name=".SearchSeolAk"></activity>
+        <activity android:name=".SearchSinJeon"></activity>
+        <activity android:name=".SearchYeopKi"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

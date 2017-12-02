@@ -23,15 +23,15 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
             Intent intent=new Intent(getApplicationContext(),SearchSeolAk.class);
             startActivity(intent);
         }
-        if(position == 1) {
+        else if(position == 1) {
             Intent intent=new Intent(getApplicationContext(),SearchHalMae.class);
             startActivity(intent);
         }
-        if(position == 2) {
+        else if(position == 2) {
             Intent intent=new Intent(getApplicationContext(),SearchEunHye.class);
             startActivity(intent);
         }
-        if(position == 3) {
+        else if(position == 3) {
             Intent intent=new Intent(getApplicationContext(),SearchHyunJoo.class);
             startActivity(intent);
         }
@@ -39,7 +39,22 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
 
     @Override
     public void onListBtnClick2(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),MenuSeolak.class);
+            startActivity(intent);
+        }
+        else if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),MenuHalmae.class);
+            startActivity(intent);
+        }
+        else if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),MenuEunhye.class);
+            startActivity(intent);
+        }
+        else if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),MenuHyunjoo.class);
+            startActivity(intent);
+        }
     }
 
 

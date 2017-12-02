@@ -55,7 +55,38 @@ public class Select_snack extends AppCompatActivity implements ListViewBtnAdapte
 
     @Override
     public void onListBtnClick2(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),MenuKimGoeul.class);
+            startActivity(intent);
+        }
+        else if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),MenuYeopki.class);
+            startActivity(intent);
+        }
+        else if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),MenuBingsoo.class);
+            startActivity(intent);
+        }
+        else if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),MenuBoolnan.class);
+            startActivity(intent);
+        }
+        else if(position == 4) {
+            Intent intent=new Intent(getApplicationContext(),MenuLegendNaembi.class);
+            startActivity(intent);
+        }
+        else if(position == 5) {
+            Intent intent=new Intent(getApplicationContext(),MenuSinjeon.class);
+            startActivity(intent);
+        }
+        else if(position == 6) {
+            Intent intent=new Intent(getApplicationContext(),MenuKookminSang.class);
+            startActivity(intent);
+        }
+        else if(position == 7) {
+            Intent intent=new Intent(getApplicationContext(),MenuMatLove.class);
+            startActivity(intent);
+        }
     }
 
 

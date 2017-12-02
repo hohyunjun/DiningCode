@@ -72,6 +72,20 @@
         <activity android:name=".SearchSeolAk"></activity>
         <activity android:name=".SearchSinJeon"></activity>
         <activity android:name=".SearchYeopKi"></activity>
+        <activity android:name=".MenuBingsoo"></activity>
+        <activity android:name=".MenuBoolnan"></activity>
+        <activity android:name=".MenuDeliBus"></activity>
+        <activity android:name=".MenuEunhye"></activity>
+        <activity android:name=".MenuHalmae"></activity>
+        <activity android:name=".MenuHyunjoo"></activity>
+        <activity android:name=".MenuKimGoeul"></activity>
+        <activity android:name=".MenuKookminSang"></activity>
+        <activity android:name=".MenuLegendNaembi"></activity>
+        <activity android:name=".MenuMatLove"></activity>
+        <activity android:name=".MenuSeolak"></activity>
+        <activity android:name=".MenuSinjeon"></activity>
+        <activity android:name=".MenuYeopki"></activity>
+        <activity android:name=".MenuMomTouch"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

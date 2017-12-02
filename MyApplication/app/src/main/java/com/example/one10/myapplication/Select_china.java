@@ -56,11 +56,15 @@ public class Select_china extends AppCompatActivity  implements ListViewBtnAdapt
     @Override
     public void onListBtnClick2(int position) {
         if(position == 0) {
-            Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+            Intent intent=new Intent(getApplicationContext(),MenuSamSung.class);
             startActivity(intent);
         }
         if(position == 1) {
-            Intent intent=new Intent(getApplicationContext(),SearchActivity.class);
+            Intent intent=new Intent(getApplicationContext(),MenuBoSung.class);
+            startActivity(intent);
+        }
+        if(position == 5) {
+            Intent intent=new Intent(getApplicationContext(),MenuJuiMara.class);
             startActivity(intent);
         }
 

@@ -1,0 +1,34 @@
+/* 공통 차트 데이터랩 */
+.spcm,.spcm_bf:before,.spcm_af:after{background:url(https://ssl.pstatic.net/sstatic/search/mobile/2016/sp_im_v19.png) no-repeat 0 0;background-size:300px 300px;-webkit-background-size:300px 300px}
+.api_c3p_datalab {position:relative}
+.api_c3p_datalab text tspan{fill:#8f8f8f;font-size:13px}
+
+.api_c3p_datalab .c3-chart path,.c3-chart line{fill:none;stroke:#c4c4c4}
+.api_c3p_datalab .c3-axis-x path{stroke:#f1f1f5}
+.api_c3p_datalab .c3-axis-x line{opacity:0}
+.api_c3p_datalab .c3-ygrids line{stroke:#f4f4f4}
+.api_c3p_datalab .c3-xgrid-lines line{stroke:#5394f0;opacity:0.5 !important;stroke-dasharray:3 2}
+.api_c3p_datalab .c3-chart-bars .c3-bars{stroke-width:1px}
+.api_c3p_datalab .c3-line{stroke-width: 2px;}
+.api_c3p_datalab .c3-circle{stroke:#5394f0;stroke-width:1px;fill:#fff !important}
+.api_c3p_datalab .c3-area{stroke-width:0;stroke:#5394f0;opacity:0.1}
+.api_c3p_datalab .c3-chart-arcs .c3-arc{stroke-width:6;stroke:#fff !important}
+/*.api_c3p_datalab .c3-chart-arcs .c3-chart-arc:last-child .c3-arc{stroke-width:0}*/
+.api_c3p_datalab .c3-chart-arcs text{text-anchor:middle;fill:#fff;font-size:19px;font-family:HelveticaNeue-Medium,sans-serif}
+.api_c3p_datalab .c3-chart-arcs text tspan.uint{fill:#fff;font-size:13px}
+.api_c3p_datalab .datalab-bar .c3-ygrids line:last-child{display:none}
+.api_c3p_datalab.white_label .c3-chart-texts text{fill:#fff !important;display:none}
+.api_c3p_datalab .datalab-max-point{display:block;position:absolute;margin:-5px 0 0 0}
+.api_c3p_datalab .datalab-max-point .point:after{content:'';position:absolute;top:9px;right:14px;display:inline-block;width:28px;height:1px;background-color:#ff6d6d}
+.api_c3p_datalab .datalab-max-point .point:before{content:'';display:inline-block;width:19px;height:20px;background-position:-276px -221px;vertical-align:top}
+.api_c3p_datalab .datalab-max-point .point.left:after{left:14px}
+.api_c3p_datalab .datalab-max-point .point.left:before{left:0}
+.api_c3p_datalab .datalab-max-point .txt{position:absolute;top:0;right:41px;display:block;padding:0 8px;font-size: 13px;color:#ff6d6d;line-height:20px;white-space:nowrap;border:1px solid #ff6d6d;background-color:#fff;-webkit-border-radius:10px;border-radius:10px}
+.api_c3p_datalab .datalab-max-point .point.left .txt{left:41px;right:auto}
+/* 개편 */
+.api_c3p_datalab .c3-chart-arcs .c3-arc{stroke-width:3;stroke:#fff}
+.api_c3p_datalab .c3-chart-arcs text{pointer-events:none;text-anchor:middle;display:block;font-size:17px;font-weight:bold}
+.api_c3p_datalab .c3-chart-arcs text .datalab-unit{font-size:10px;font-weight:normal}
+/*.api_c3p_datalab.white_label .c3-chart-arcs text{fill:#fff !important;}*/
+/*.api_c3p_datalab.white_label .c3-chart-arcs text .datalab-unit{fill:#fff !important;}*/
+

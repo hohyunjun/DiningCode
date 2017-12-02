@@ -21,6 +21,9 @@
 
         <activity android:name=".Select_main"></activity>
         <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".MenuSamSung"></activity>
+        <activity android:name=".MenuBoSung"></activity>
+        <activity android:name=".MenuJuiMara"></activity>
         <activity android:name=".SearchSamSung"></activity>
         <activity android:name=".SearchBoSung"></activity>
         <activity android:name=".SearchBukAkLu"></activity>

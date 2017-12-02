@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/diningcode"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -19,12 +19,20 @@
             </intent-filter>
         </activity>
 
-
-
-
         <activity android:name=".Select_main"></activity>
         <activity android:name=".SearchActivity"></activity>
         <activity android:name=".SearchSamSung"></activity>
+        <activity android:name=".SearchBoSung"></activity>
+        <activity android:name=".SearchBukAkLu"></activity>
+        <activity android:name=".SearchChungRok"></activity>
+        <activity android:name=".SearchHuaGua"></activity>
+        <activity android:name=".SearchImgm"></activity>
+        <activity android:name=".SearchJuiMaRa"></activity>
+        <activity android:name=".SearchQuaiLe"></activity>
+        <activity android:name=".SearchSongBaek"></activity>
+        <activity android:name=".SearchSSamStory"></activity>
+        <activity android:name=".SearchGrimby"></activity>
+        <activity android:name=".SearchSecondStory"></activity>
         <activity android:name=".Select_rice"></activity>
         <activity android:name=".Select_kor"></activity>
         <activity android:name=".Select_not_rice"></activity>

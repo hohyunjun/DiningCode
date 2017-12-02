@@ -1,5 +1,6 @@
 package com.example.one10.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +19,22 @@ public class Select_not_soup extends AppCompatActivity implements ListViewBtnAda
 
     @Override
     public void onListBtnClick1(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchSongBaek.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchSSamStory.class);
+            startActivity(intent);
+        }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),SearchGrimby.class);
+            startActivity(intent);
+        }
+        if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),SearchSecondStory.class);
+            startActivity(intent);
+        }
     }
     @Override
     public void onListBtnClick2(int position) {
@@ -39,25 +55,25 @@ public class Select_not_soup extends AppCompatActivity implements ListViewBtnAda
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.songbaek)) ;
         item.setText("송백식당") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.ssamstory)) ;
         item.setText("쌈스토리") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.grimby)) ;
         item.setText("그림비") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_snack)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.secondstory)) ;
         item.setText("두번째이야기") ;
         list.add(item) ;
 

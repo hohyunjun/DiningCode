@@ -12,7 +12,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-public class SearchSamSung extends AppCompatActivity
+public class SearchSongBaek extends AppCompatActivity
         implements OnMapReadyCallback {
 
     @Override
@@ -29,12 +29,12 @@ public class SearchSamSung extends AppCompatActivity
     @Override
     public void onMapReady(final GoogleMap map) {
 
-        LatLng MOM = new LatLng(37.608178, 126.999433);
+        LatLng MOM = new LatLng(37.610302, 126.992126);
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(MOM);
-        markerOptions.title("삼성원");
-        markerOptions.snippet("서울특별시 성북구 정릉로10길 27");
+        markerOptions.title("송백식당");
+        markerOptions.snippet("서울특별시 성북구 정릉로6길 41-3");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(MOM));

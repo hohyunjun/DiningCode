@@ -63,8 +63,28 @@ public class Select_china extends AppCompatActivity  implements ListViewBtnAdapt
             Intent intent=new Intent(getApplicationContext(),MenuBoSung.class);
             startActivity(intent);
         }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),MenuImgm.class);
+            startActivity(intent);
+        }
+        if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),MenuQuaiLe.class);
+            startActivity(intent);
+        }
+        if(position == 4) {
+            Intent intent=new Intent(getApplicationContext(),MenuBukAkLu.class);
+            startActivity(intent);
+        }
         if(position == 5) {
             Intent intent=new Intent(getApplicationContext(),MenuJuiMara.class);
+            startActivity(intent);
+        }
+        if(position == 6) {
+            Intent intent=new Intent(getApplicationContext(),MenuHuaGua.class);
+            startActivity(intent);
+        }
+        if(position == 7) {
+            Intent intent=new Intent(getApplicationContext(),MenuChungRok.class);
             startActivity(intent);
         }
 

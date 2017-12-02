@@ -23,7 +23,16 @@
         <activity android:name=".SearchActivity"></activity>
         <activity android:name=".MenuSamSung"></activity>
         <activity android:name=".MenuBoSung"></activity>
+        <activity android:name=".MenuImgm"></activity>
         <activity android:name=".MenuJuiMara"></activity>
+        <activity android:name=".MenuBukAkLu"></activity>
+        <activity android:name=".MenuQuaiLe"></activity>
+        <activity android:name=".MenuChungRok"></activity>
+        <activity android:name=".MenuHuaGua"></activity>
+        <activity android:name=".MenuSongBaek"></activity>
+        <activity android:name=".MenuSSamStory"></activity>
+        <activity android:name=".MenuSecondStory"></activity>
+        <activity android:name=".MenuGrimby"></activity>
         <activity android:name=".SearchSamSung"></activity>
         <activity android:name=".SearchBoSung"></activity>
         <activity android:name=".SearchBukAkLu"></activity>

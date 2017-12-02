@@ -72,49 +72,49 @@ public class Select_snack extends AppCompatActivity implements ListViewBtnAdapte
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.goeul)) ;
         item.setText("김밥고을") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.yeopki)) ;
         item.setText("엽기떡볶이") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.bingsoo)) ;
         item.setText("빙수야") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.boolnan)) ;
         item.setText("불난집") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.naembi)) ;
         item.setText("전설의냄비떡볶이") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.sinjeon)) ;
         item.setText("신전떡볶이") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.kookminsang)) ;
         item.setText("국민상회") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.matlove)) ;
         item.setText("맛사랑") ;
         list.add(item) ;
         i++ ;

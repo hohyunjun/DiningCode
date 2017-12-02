@@ -34,7 +34,7 @@ public class SearchMatLove extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Love);
         markerOptions.title("맛사랑");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 솔샘로 42");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Love));

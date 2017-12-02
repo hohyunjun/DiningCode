@@ -34,7 +34,7 @@ public class SearchEunHye extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Go);
         markerOptions.title("은혜감자탕");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 정릉로21가길 41");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Go));

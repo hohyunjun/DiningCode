@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,13 +54,13 @@ public class Select_western extends AppCompatActivity implements ListViewBtnAdap
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.momtouch)) ;
         item.setText("맘스터치") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.delibus)) ;
         item.setText("델리버스") ;
         list.add(item) ;
         i++ ;

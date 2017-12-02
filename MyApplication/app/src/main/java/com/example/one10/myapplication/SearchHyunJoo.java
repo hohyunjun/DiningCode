@@ -34,7 +34,7 @@ public class SearchHyunJoo extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Go);
         markerOptions.title("현주네포차");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 정릉로10길 36");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Go));

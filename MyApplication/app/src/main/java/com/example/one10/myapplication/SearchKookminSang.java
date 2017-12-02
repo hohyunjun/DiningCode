@@ -34,7 +34,7 @@ public class SearchKookminSang extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Sang);
         markerOptions.title("국민상회");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 정릉로8길 79");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Sang));

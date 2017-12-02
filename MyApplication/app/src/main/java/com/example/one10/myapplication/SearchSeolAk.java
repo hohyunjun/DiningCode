@@ -34,7 +34,7 @@ public class SearchSeolAk extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Go);
         markerOptions.title("설악추어탕");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 정릉동 690-4");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Go));

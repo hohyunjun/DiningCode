@@ -34,7 +34,7 @@ public class SearchMomTouch extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(MOM);
         markerOptions.title("맘스터치");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 정릉로 77");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(MOM));

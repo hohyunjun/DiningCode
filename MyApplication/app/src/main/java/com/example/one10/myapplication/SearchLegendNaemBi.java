@@ -34,7 +34,7 @@ public class SearchLegendNaemBi extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Legend);
         markerOptions.title("전설의냄비떡볶이");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 정릉로8길 79");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Legend));

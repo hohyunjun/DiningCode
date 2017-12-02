@@ -56,25 +56,25 @@ public class Select_soup extends AppCompatActivity implements ListViewBtnAdapter
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.seolak)) ;
         item.setText("설악추어탕") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.halmae)) ;
         item.setText("할매순대국") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.eunhye)) ;
         item.setText("은혜감자탕") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.hyunjoo)) ;
         item.setText("현주네포차") ;
         list.add(item) ;
         i++ ;

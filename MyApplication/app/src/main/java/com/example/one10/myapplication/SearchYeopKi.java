@@ -34,7 +34,7 @@ public class SearchYeopKi extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Yeop);
         markerOptions.title("엽기떡볶이");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 보국문로 4");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Yeop));

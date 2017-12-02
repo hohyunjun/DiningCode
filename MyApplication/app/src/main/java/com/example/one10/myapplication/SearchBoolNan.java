@@ -34,7 +34,7 @@ public class SearchBoolNan extends AppCompatActivity
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(Boolnan);
         markerOptions.title("불난집");
-        //markerOptions.snippet("한국의 수도");
+        markerOptions.snippet("서울특별시 성북구 동소문로 241-1");
         map.addMarker(markerOptions);
 
         map.moveCamera(CameraUpdateFactory.newLatLng(Boolnan));

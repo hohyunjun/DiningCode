@@ -1,5 +1,6 @@
 package com.example.one10.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -14,16 +15,37 @@ import java.util.ArrayList;
  * Created by one10 on 2017-11-01.
  */
 
-public class Select_chicken extends AppCompatActivity implements ListViewBtnAdapter.ListBtnClickListener {
+public class Select_chicken extends AppCompatActivity implements ListViewBtnAdapter.ListBtnClickListener{
 
     @Override
     public void onListBtnClick1(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchNomchicken.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchMattJJang.class);
+            startActivity(intent);
+        }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),SearchGGolGarlic.class);
+            startActivity(intent);
+        }
     }
-
     @Override
     public void onListBtnClick2(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),MenuNomchicken.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),MenuMattzang.class);
+            startActivity(intent);
+        }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),MenuGulgaric.class);
+            startActivity(intent);
+        }
     }
 
 

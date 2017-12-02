@@ -1,12 +1,12 @@
 package com.example.one10.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,12 +18,44 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
 
     @Override
     public void onListBtnClick1(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),SearchWangdaePo.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),SearchJoKyung.class);
+            startActivity(intent);
+        }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),SearchBaebattgul.class);
+            startActivity(intent);
+        }
+        if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),SearchPighouse.class);
+            startActivity(intent);
+        }
+        if(position == 4) {
+            Intent intent=new Intent(getApplicationContext(),SearchSohanmari.class);
+            startActivity(intent);
+        }
+        if(position == 5) {
+            Intent intent=new Intent(getApplicationContext(),SearchSongjalbi.class);
+            startActivity(intent);
+        }
+        if(position == 6) {
+            Intent intent=new Intent(getApplicationContext(),SearchBokakjul.class);
+            startActivity(intent);
+        }
+        if(position == 7) {
+            Intent intent=new Intent(getApplicationContext(),SearchChuline.class);
+            startActivity(intent);
+        }
     }
     @Override
     public void onListBtnClick2(int position) {
-        Toast.makeText(this, Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+
     }
+
 
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {

@@ -62,19 +62,19 @@ public class Select_chicken extends AppCompatActivity implements ListViewBtnAdap
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.nomchicken)) ;
         item.setText("놈치킨") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.mattjjang)) ;
         item.setText("맛짱") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.ggol)) ;
         item.setText("꿀양파닭") ;
         list.add(item) ;
         i++ ;

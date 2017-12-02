@@ -54,14 +54,14 @@ public class Select_not_kor extends AppCompatActivity implements ListViewBtnAdap
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.dokyodon)) ;
         item.setText("도꼬돈카츠") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
-        item.setText("카츠동") ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.doncafe)) ;
+        item.setText("돈카페") ;
         list.add(item) ;
         i++ ;
 

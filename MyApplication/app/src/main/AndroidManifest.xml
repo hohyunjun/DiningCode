@@ -27,6 +27,13 @@
         <activity android:name=".MenuJuiMara"></activity>
         <activity android:name=".MenuBukAkLu"></activity>
         <activity android:name=".MenuNomchicken"></activity>
+        <activity android:name=".MenuWangdaepo"></activity>
+        <activity android:name=".MenuJokyung"></activity>
+        <activity android:name=".MenuBaebatgol"></activity>
+        <activity android:name=".MenuSohanmari"></activity>
+        <activity android:name=".MenuSongjunggalbi"></activity>
+        <activity android:name=".MenuBokakgol"></activity>
+        <activity android:name=".MenuChuline"></activity>
         <activity android:name=".MenuMattzang"></activity>
         <activity android:name=".MenuGulgaric"></activity>
         <activity android:name=".MenuQuaiLe"></activity>
@@ -53,7 +60,6 @@
         <activity android:name=".SearchJuiMaRa"></activity>
         <activity android:name=".SearchQuaiLe"></activity>
         <activity android:name=".SearchTokyodon"></activity>
-        <activity android:name=".SearchPighouse"></activity>
         <activity android:name=".SearchKazdong"></activity>
         <activity android:name=".SearchChuline"></activity>
         <activity android:name=".SearchSongBaek"></activity>

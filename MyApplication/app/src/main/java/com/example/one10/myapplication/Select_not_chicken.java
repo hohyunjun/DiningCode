@@ -31,29 +31,52 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
             startActivity(intent);
         }
         if(position == 3) {
-            Intent intent=new Intent(getApplicationContext(),SearchPighouse.class);
-            startActivity(intent);
-        }
-        if(position == 4) {
             Intent intent=new Intent(getApplicationContext(),SearchSohanmari.class);
             startActivity(intent);
         }
-        if(position == 5) {
+        if(position == 4) {
             Intent intent=new Intent(getApplicationContext(),SearchSongjalbi.class);
             startActivity(intent);
         }
-        if(position == 6) {
+        if(position == 5) {
             Intent intent=new Intent(getApplicationContext(),SearchBokakjul.class);
             startActivity(intent);
         }
-        if(position == 7) {
+        if(position == 6) {
             Intent intent=new Intent(getApplicationContext(),SearchChuline.class);
             startActivity(intent);
         }
     }
     @Override
     public void onListBtnClick2(int position) {
-
+        if(position == 0) {
+            Intent intent=new Intent(getApplicationContext(),MenuWangdaepo.class);
+            startActivity(intent);
+        }
+        if(position == 1) {
+            Intent intent=new Intent(getApplicationContext(),MenuJokyung.class);
+            startActivity(intent);
+        }
+        if(position == 2) {
+            Intent intent=new Intent(getApplicationContext(),MenuBaebatgol.class);
+            startActivity(intent);
+        }
+        if(position == 3) {
+            Intent intent=new Intent(getApplicationContext(),MenuSohanmari.class);
+            startActivity(intent);
+        }
+        if(position == 4) {
+            Intent intent=new Intent(getApplicationContext(),MenuSongjunggalbi.class);
+            startActivity(intent);
+        }
+        if(position == 5) {
+            Intent intent=new Intent(getApplicationContext(),MenuBokakgol.class);
+            startActivity(intent);
+        }
+        if(position == 6) {
+            Intent intent=new Intent(getApplicationContext(),MenuChuline.class);
+            startActivity(intent);
+        }
     }
 
 
@@ -71,49 +94,43 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
 
         // 아이템 생성.
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.wangdaepo)) ;
         item.setText("왕대포") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_disorder_2)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.jokyung)) ;
         item.setText("주경야돈") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.baebat)) ;
         item.setText("배밭골") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
-        item.setText("돼지하우스") ;
-        list.add(item) ;
-        i++ ;
-
-        item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.sohanmari)) ;
         item.setText("소한마리") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.songjungjalbi)) ;
         item.setText("송정갈비") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.bokakgol)) ;
         item.setText("북악골") ;
         list.add(item) ;
         i++ ;
 
         item = new ListViewBtnItem() ;
-        item.setIcon(ContextCompat.getDrawable(this, R.drawable.select_search)) ;
+        item.setIcon(ContextCompat.getDrawable(this, R.drawable.chuline)) ;
         item.setText("철이네") ;
         list.add(item) ;
         i++ ;
@@ -151,7 +168,6 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
         data.add("왕대포");
         data.add("주경야돈");
         data.add("배밭골");
-        data.add("돼지하우스");
         data.add("소한마리");
         data.add("송정갈비");
         data.add("북악골");

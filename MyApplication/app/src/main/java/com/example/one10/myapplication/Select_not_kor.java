@@ -22,7 +22,7 @@ public class Select_not_kor extends AppCompatActivity implements ListViewBtnAdap
             Intent intent=new Intent(getApplicationContext(),SearchTokyodon.class);
             startActivity(intent);
         }
-        if(position == 1) {
+        else if(position == 1) {
             Intent intent = new Intent(getApplicationContext(), SearchKazdong.class);
             startActivity(intent);
         }
@@ -33,7 +33,7 @@ public class Select_not_kor extends AppCompatActivity implements ListViewBtnAdap
             Intent intent=new Intent(getApplicationContext(),MenuTokyodon.class);
             startActivity(intent);
         }
-        if(position == 1) {
+        else if(position == 1) {
             Intent intent = new Intent(getApplicationContext(), MenuKazdon.class);
             startActivity(intent);
         }

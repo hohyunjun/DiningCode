@@ -23,28 +23,28 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
             Intent intent=new Intent(getApplicationContext(),SearchWangdaePo.class);
             startActivity(intent);
         }
-        if(position == 1) {
+        else if(position == 1) {
             Intent intent=new Intent(getApplicationContext(),SearchJoKyung.class);
             startActivity(intent);
         }
-        if(position == 2) {
+        else if(position == 2) {
             Intent intent=new Intent(getApplicationContext(),SearchBaebattgul.class);
             startActivity(intent);
             Log.d("Select_not_chicken","(로그 메시지) 배밭골 지도보기 버튼 클릭됨.");
         }
-        if(position == 3) {
+        else if(position == 3) {
             Intent intent=new Intent(getApplicationContext(),SearchSohanmari.class);
             startActivity(intent);
         }
-        if(position == 4) {
+        else if(position == 4) {
             Intent intent=new Intent(getApplicationContext(),SearchSongjalbi.class);
             startActivity(intent);
         }
-        if(position == 5) {
+        else if(position == 5) {
             Intent intent=new Intent(getApplicationContext(),SearchBokakjul.class);
             startActivity(intent);
         }
-        if(position == 6) {
+        else if(position == 6) {
             Intent intent=new Intent(getApplicationContext(),SearchChuline.class);
             startActivity(intent);
         }
@@ -55,28 +55,28 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
             Intent intent=new Intent(getApplicationContext(),MenuWangdaepo.class);
             startActivity(intent);
         }
-        if(position == 1) {
+        else if(position == 1) {
             Intent intent=new Intent(getApplicationContext(),MenuJokyung.class);
             startActivity(intent);
         }
-        if(position == 2) {
+        else if(position == 2) {
             Intent intent=new Intent(getApplicationContext(),MenuBaebatgol.class);
             startActivity(intent);
             Log.d("Select_not_chicken","(로그 메시지) 배밭골 메뉴보기 버튼 클릭됨.");
         }
-        if(position == 3) {
+        else if(position == 3) {
             Intent intent=new Intent(getApplicationContext(),MenuSohanmari.class);
             startActivity(intent);
         }
-        if(position == 4) {
+        else if(position == 4) {
             Intent intent=new Intent(getApplicationContext(),MenuSongjunggalbi.class);
             startActivity(intent);
         }
-        if(position == 5) {
+        else if(position == 5) {
             Intent intent=new Intent(getApplicationContext(),MenuBokakgol.class);
             startActivity(intent);
         }
-        if(position == 6) {
+        else if(position == 6) {
             Intent intent=new Intent(getApplicationContext(),MenuChuline.class);
             startActivity(intent);
         }

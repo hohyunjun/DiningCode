@@ -3,6 +3,7 @@ package com.example.one10.myapplication;
 import android.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -20,6 +21,7 @@ public class SearchBaebattgul extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.location);
 
+        Log.d("SearchBaebattgul","(로그 메시지) onCreate 실행.");
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.googleMap);
@@ -28,6 +30,8 @@ public class SearchBaebattgul extends AppCompatActivity
 
     @Override
     public void onMapReady(final GoogleMap map) {
+
+        Log.d("SearchBaebattgul","(로그 메시지) onMapReady 실행.");
 
         LatLng Bae = new LatLng(37.608179, 126.999802);
 

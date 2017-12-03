@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -29,6 +30,7 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
         if(position == 2) {
             Intent intent=new Intent(getApplicationContext(),SearchBaebattgul.class);
             startActivity(intent);
+            Log.d("Select_not_chicken","(로그 메시지) 배밭골 지도보기 버튼 클릭됨.");
         }
         if(position == 3) {
             Intent intent=new Intent(getApplicationContext(),SearchSohanmari.class);
@@ -60,6 +62,7 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
         if(position == 2) {
             Intent intent=new Intent(getApplicationContext(),MenuBaebatgol.class);
             startActivity(intent);
+            Log.d("Select_not_chicken","(로그 메시지) 배밭골 메뉴보기 버튼 클릭됨.");
         }
         if(position == 3) {
             Intent intent=new Intent(getApplicationContext(),MenuSohanmari.class);
@@ -82,6 +85,7 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
 
 
     public boolean loadItemsFromDB(ArrayList<ListViewBtnItem> list) {
+        Log.d("Select_not_chicken","(로그 메시지) loadItemsFromDB 함수 실행.");
         ListViewBtnItem item ;
         int i ;
 
@@ -135,11 +139,13 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
         list.add(item) ;
         i++ ;
 
+        Log.d("Select_not_chicken","(로그 메시지) item 생성 완료.");
         return true ;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("Select_not_chicken","(로그 메시지) onCreate 함수 실행.");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_not_chicken);
 
@@ -154,9 +160,9 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
         listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView parent, View v, int position, long id) {
 
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
+                Log.d("Select_not_chicken","(로그 메시지) onCreate 안에 setOnItemClickListener 안에 onItemClick 실행.");
             }
         });
     }

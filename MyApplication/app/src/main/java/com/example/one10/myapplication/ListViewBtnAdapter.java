@@ -1,6 +1,7 @@
 package com.example.one10.myapplication;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
         this.resourceId = resource ;
 
         this.listBtnClickListener = clickListener ;
+        Log.d("ListViewBtnAdapter","(로그 메시지) ListBtnClickListener 실행.");
     }
 
     // 새롭게 만든 Layout을 위한 View를 생성하는 코드
@@ -48,6 +50,7 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(this.resourceId/*R.layout.listview_btn_item*/, parent, false);
+            Log.d("ListViewBtnAdapter","(로그 메시지) getView안의 if문 실행.");
         }
 
         // 화면에 표시될 View(Layout이 inflate된)로부터 위젯에 대한 참조 획득
@@ -68,7 +71,9 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
             public void onClick(View v) {
                 if (listBtnClickListener != null) {
                     listBtnClickListener.onListBtnClick1((int)v.getTag()) ;
+                    Log.d("ListViewBtnAdapter","(로그 메시지) button1의 setOnClickListener if문 실행.");
                 }
+                Log.d("ListViewBtnAdapter","(로그 메시지) button1의 setOnClickListener 실행.");
             }
         });
 
@@ -86,7 +91,9 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
         // ListBtnClickListener(MainActivity)의 onListBtnClick() 함수 호출.
         if (this.listBtnClickListener != null) {
             this.listBtnClickListener.onListBtnClick2((int)v.getTag()) ;
+            Log.d("ListViewBtnAdapter","(로그 메시지) button2의 onClick if문 실행.");
         }
+        Log.d("ListViewBtnAdapter","(로그 메시지) button2의 onClick 실행.");
     }
 
 

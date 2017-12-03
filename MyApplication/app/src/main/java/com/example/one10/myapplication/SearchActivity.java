@@ -102,7 +102,7 @@ public class SearchActivity extends AppCompatActivity
             }
         });
 
-        Log.d(TAG, "onCreate");
+        Log.d(TAG, "onCreate(로그 메시지)");
         mActivity = this;
 
 
@@ -168,7 +168,7 @@ public class SearchActivity extends AppCompatActivity
 
         if (mGoogleApiClient.isConnected()) {
 
-            Log.d(TAG, "onResume : call startLocationUpdates");
+            Log.d(TAG, "onResume(로그 메시지) : call startLocationUpdates");
             if (!mRequestingLocationUpdates) startLocationUpdates();
         }
 
@@ -206,19 +206,19 @@ public class SearchActivity extends AppCompatActivity
 
         if (!checkLocationServicesStatus()) {
 
-            Log.d(TAG, "startLocationUpdates : call showDialogForLocationServiceSetting");
+            Log.d(TAG, "startLocationUpdates(로그 메시지) : call showDialogForLocationServiceSetting");
             showDialogForLocationServiceSetting();
         }else {
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
-                Log.d(TAG, "startLocationUpdates : 퍼미션 안가지고 있음");
+                Log.d(TAG, "startLocationUpdates(로그 메시지) : 퍼미션 안가지고 있음");
                 return;
             }
 
 
-            Log.d(TAG, "startLocationUpdates : call FusedLocationApi.requestLocationUpdates");
+            Log.d(TAG, "startLocationUpdates(로그 메시지) : call FusedLocationApi.requestLocationUpdates");
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, locationRequest, this);
             mRequestingLocationUpdates = true;
 
@@ -232,7 +232,7 @@ public class SearchActivity extends AppCompatActivity
 
     private void stopLocationUpdates() {
 
-        Log.d(TAG,"stopLocationUpdates : LocationServices.FusedLocationApi.removeLocationUpdates");
+        Log.d(TAG,"stopLocationUpdates(로그 메시지) : LocationServices.FusedLocationApi.removeLocationUpdates");
         LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
         mRequestingLocationUpdates = false;
     }
@@ -242,7 +242,7 @@ public class SearchActivity extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        Log.d(TAG, "onMapReady :");
+        Log.d(TAG, "onMapReady(로그 메시지) :");
 
         mGoogleMap = googleMap;
 
@@ -259,7 +259,7 @@ public class SearchActivity extends AppCompatActivity
             @Override
             public boolean onMyLocationButtonClick() {
 
-                Log.d( TAG, "onMyLocationButtonClick : 위치에 따른 카메라 이동 활성화");
+                Log.d( TAG, "onMyLocationButtonClick(로그 메시지) : 위치에 따른 카메라 이동 활성화");
                 mMoveMapByAPI = true;
                 return true;
             }
@@ -269,7 +269,7 @@ public class SearchActivity extends AppCompatActivity
             @Override
             public void onMapClick(LatLng latLng) {
 
-                Log.d( TAG, "onMapClick :");
+                Log.d( TAG, "onMapClick(로그 메시지) :");
             }
         });
 
@@ -278,7 +278,7 @@ public class SearchActivity extends AppCompatActivity
             public void onCameraChange(CameraPosition cameraPosition) {
                 if (mMoveMapByUser == true && mRequestingLocationUpdates){
 
-                    Log.d(TAG, "onCameraMove : 위치에 따른 카메라 이동 비활성화");
+                    Log.d(TAG, "onCameraMove(로그 메시지) : 위치에 따른 카메라 이동 비활성화");
                     mMoveMapByAPI = false;
                 }
 
@@ -301,7 +301,7 @@ public class SearchActivity extends AppCompatActivity
 
         currentPosition= new LatLng( location.getLatitude(), location.getLongitude());
 
-        Log.d(TAG, "onLocationChanged : ");
+        Log.d(TAG, "onLocationChanged(로그 메시지) : ");
 
         String markerTitle = getCurrentAddress(location);
         String markerSnippet = "위도:" + String.valueOf(location.getLatitude())
@@ -319,7 +319,7 @@ public class SearchActivity extends AppCompatActivity
 
         if(mGoogleApiClient != null && mGoogleApiClient.isConnected() == false){
 
-            Log.d(TAG, "onStart: mGoogleApiClient connect");
+            Log.d(TAG, "onStart(로그 메시지): mGoogleApiClient connect");
             mGoogleApiClient.connect();
         }
 
@@ -331,13 +331,13 @@ public class SearchActivity extends AppCompatActivity
 
         if (mRequestingLocationUpdates) {
 
-            Log.d(TAG, "onStop : call stopLocationUpdates");
+            Log.d(TAG, "onStop(로그 메시지) : call stopLocationUpdates ");
             stopLocationUpdates();
         }
 
         if ( mGoogleApiClient.isConnected()) {
 
-            Log.d(TAG, "onStop : mGoogleApiClient disconnect");
+            Log.d(TAG, "onStop(로그 메시지) : mGoogleApiClient disconnect");
             mGoogleApiClient.disconnect();
         }
 
@@ -364,15 +364,15 @@ public class SearchActivity extends AppCompatActivity
 
                 } else {
 
-                    Log.d(TAG, "onConnected : 퍼미션 가지고 있음");
-                    Log.d(TAG, "onConnected : call startLocationUpdates");
+                    Log.d(TAG, "onConnected(로그 메시지) : 퍼미션 가지고 있음");
+                    Log.d(TAG, "onConnected(로그 메시지) : call startLocationUpdates");
                     startLocationUpdates();
                     mGoogleMap.setMyLocationEnabled(true);
                 }
 
             }else{
 
-                Log.d(TAG, "onConnected : call startLocationUpdates");
+                Log.d(TAG, "onConnected(로그 메시지) : call startLocationUpdates");
                 startLocationUpdates();
                 mGoogleMap.setMyLocationEnabled(true);
             }
@@ -383,7 +383,7 @@ public class SearchActivity extends AppCompatActivity
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
-        Log.d(TAG, "onConnectionFailed");
+        Log.d(TAG, "onConnectionFailed(로그 메시지)");
         setDefaultLocation();
     }
 
@@ -391,13 +391,13 @@ public class SearchActivity extends AppCompatActivity
     @Override
     public void onConnectionSuspended(int cause) {
 
-        Log.d(TAG, "onConnectionSuspended");
+        Log.d(TAG, "onConnectionSuspended(로그 메시지)");
         if (cause == CAUSE_NETWORK_LOST)
             Log.e(TAG, "onConnectionSuspended(): Google Play services " +
-                    "connection lost.  Cause: network lost.");
+                    "connection lost.  Cause: network lost.(로그 메시지)");
         else if (cause == CAUSE_SERVICE_DISCONNECTED)
             Log.e(TAG, "onConnectionSuspended():  Google Play services " +
-                    "connection lost.  Cause: service disconnected");
+                    "connection lost.  Cause: service disconnected(로그 메시지)");
     }
 
 // ================================
@@ -470,7 +470,7 @@ public class SearchActivity extends AppCompatActivity
 
         if ( mMoveMapByAPI ) { // API에서 맵을 이동시킨다
 
-            Log.d( TAG, "setCurrentLocation :  mGoogleMap moveCamera "
+            Log.d( TAG, "setCurrentLocation(로그 메시지) :  mGoogleMap moveCamera "
                     + location.getLatitude() + " " + location.getLongitude() ) ;
             // CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(currentLatLng, 15);
             CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLng(currentLatLng);
@@ -526,11 +526,11 @@ public class SearchActivity extends AppCompatActivity
         } else if (hasFineLocationPermission == PackageManager.PERMISSION_GRANTED) {
 
 
-            Log.d(TAG, "checkPermissions : 퍼미션 가지고 있음");
+            Log.d(TAG, "checkPermissions(로그 메시지) : 퍼미션 가지고 있음");
 
             if ( mGoogleApiClient.isConnected() == false) {
 
-                Log.d(TAG, "checkPermissions : 퍼미션 가지고 있음");
+                Log.d(TAG, "checkPermissions(로그 메시지) : 퍼미션 가지고 있음");
                 mGoogleApiClient.connect();
             }
         }
@@ -551,7 +551,7 @@ public class SearchActivity extends AppCompatActivity
 
                 if ( mGoogleApiClient.isConnected() == false) {
 
-                    Log.d(TAG, "onRequestPermissionsResult : mGoogleApiClient connect");
+                    Log.d(TAG, "onRequestPermissionsResult(로그 메시지) : mGoogleApiClient connect");
                     mGoogleApiClient.connect();
                 }
 
@@ -653,12 +653,12 @@ public class SearchActivity extends AppCompatActivity
                 if (checkLocationServicesStatus()) {
                     if (checkLocationServicesStatus()) {
 
-                        Log.d(TAG, "onActivityResult : 퍼미션 가지고 있음");
+                        Log.d(TAG, "onActivityResult(로그 메시지) : 퍼미션 가지고 있음");
 
 
                         if ( mGoogleApiClient.isConnected() == false ) {
 
-                            Log.d( TAG, "onActivityResult : mGoogleApiClient connect ");
+                            Log.d( TAG, "onActivityResult(로그 메시지) : mGoogleApiClient connect ");
                             mGoogleApiClient.connect();
                         }
                         return;

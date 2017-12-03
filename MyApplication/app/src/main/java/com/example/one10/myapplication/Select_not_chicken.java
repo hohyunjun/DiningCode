@@ -159,11 +159,5 @@ public class Select_not_chicken extends AppCompatActivity implements ListViewBtn
 
         listview.setAdapter(adapter);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            public void onItemClick(AdapterView parent, View v, int position, long id) {
-                Log.d("Select_not_chicken","(로그 메시지) onCreate 안에 setOnItemClickListener 안에 onItemClick 실행.");
-            }
-        });
     }
 }

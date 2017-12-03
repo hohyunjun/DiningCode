@@ -37,7 +37,7 @@ public class ListViewBtnAdapter extends ArrayAdapter implements View.OnClickList
         this.resourceId = resource ;
 
         this.listBtnClickListener = clickListener ;
-        Log.d("ListViewBtnAdapter","(로그 메시지) ListBtnClickListener 실행.");
+        Log.d("ListViewBtnAdapter","(로그 메시지) ListViewBtnAdapter 실행.");
     }
 
     // 새롭게 만든 Layout을 위한 View를 생성하는 코드

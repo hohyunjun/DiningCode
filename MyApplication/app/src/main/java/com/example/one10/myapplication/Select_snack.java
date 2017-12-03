@@ -155,12 +155,6 @@ public class Select_snack extends AppCompatActivity implements ListViewBtnAdapte
 
         listview.setAdapter(adapter);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView parent, View v, int position, long id) {
-
-            }
-        });
     }
 
 }

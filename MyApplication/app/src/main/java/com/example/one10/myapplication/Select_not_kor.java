@@ -76,11 +76,5 @@ public class Select_not_kor extends AppCompatActivity implements ListViewBtnAdap
 
         listview.setAdapter(adapter);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView parent, View v, int position, long id) {
-
-            }
-        });
     }
 }

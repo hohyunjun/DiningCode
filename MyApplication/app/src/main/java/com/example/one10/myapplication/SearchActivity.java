@@ -119,19 +119,21 @@ public class SearchActivity extends AppCompatActivity
 
     @Override
     public void onPlacesFailure(PlacesException e) {
-
+        Log.d(TAG, "onPlacesFailure(로그 메시지)");
     }
 
     @Override
     public void onPlacesStart() {
-
+        Log.d(TAG, "onPlacesStart(로그 메시지)");
     }
 
     @Override
     public void onPlacesSuccess(final List<Place> places) {
+        Log.d(TAG, "onPlacesSuccess(로그 메시지)");
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                Log.d(TAG, "onPlacesSuccess안의 run 함수 실행(로그 메시지)");
                 for (noman.googleplaces.Place place : places) {
 
                     LatLng latLng
@@ -159,7 +161,7 @@ public class SearchActivity extends AppCompatActivity
 
     @Override
     public void onPlacesFinished() {
-
+        Log.d(TAG, "onPlacesFinished(로그 메시지)");
     }
     @Override
     public void onResume() {
@@ -186,6 +188,7 @@ public class SearchActivity extends AppCompatActivity
 
     public void showPlaceInformation(LatLng location)
     {
+        Log.d(TAG, "showPlaceInformation(로그 메시지)");
         mGoogleMap.clear();//지도 클리어
 
         if (previous_marker != null)
